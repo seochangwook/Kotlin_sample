@@ -11,9 +11,17 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.androidhuman.example.hellokotlin.HelloKt;
+import AddModule_package.SampleKt;
+import Sample_2.Sample_2Kt;
 
 public class MainActivity extends AppCompatActivity {
     TextView sample_text;
+    TextView sample_text_2;
+    TextView sample_text_3;
+    TextView sample_text_4;
+
+    //더하기 결과(코들린 처리)//
+    int result_value;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,8 +30,20 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
 
         sample_text = (TextView)findViewById(R.id.sample_textview);
+        sample_text_2 = (TextView)findViewById(R.id.result_value);
+        sample_text_3 = (TextView)findViewById(R.id.result_2_value);
+        sample_text_4 = (TextView)findViewById(R.id.lambda_sample);
 
+        /** Kotlin Test **/
         sample_text.setText(HelloKt.formatMessage("Kotlin")); //코틀린으로 출력//
+        result_value = SampleKt.add_value(10,20);
+        sample_text_2.setText(""+result_value);
+        sample_text_3.setText(SampleKt.get_result_print());
+        SampleKt.print_message();
+        sample_text_4.setText(SampleKt.get_return(1,10));
+        SampleKt.compare_func(10);
+        Sample_2Kt.print_str();
+        
 
         setSupportActionBar(toolbar);
 
