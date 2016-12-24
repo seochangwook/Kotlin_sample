@@ -19,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     TextView sample_text_2;
     TextView sample_text_3;
     TextView sample_text_4;
+    TextView sample_text_5;
+    TextView sample_text_6;
 
     //더하기 결과(코들린 처리)//
     int result_value;
@@ -33,6 +35,8 @@ public class MainActivity extends AppCompatActivity {
         sample_text_2 = (TextView)findViewById(R.id.result_value);
         sample_text_3 = (TextView)findViewById(R.id.result_2_value);
         sample_text_4 = (TextView)findViewById(R.id.lambda_sample);
+        sample_text_5 = (TextView)findViewById(R.id.condition_text);
+        sample_text_6 = (TextView)findViewById(R.id.forsamplesum);
 
         /** Kotlin Test **/
         sample_text.setText(HelloKt.formatMessage("Kotlin")); //코틀린으로 출력//
@@ -43,7 +47,9 @@ public class MainActivity extends AppCompatActivity {
         sample_text_4.setText(SampleKt.get_return(1,10));
         SampleKt.compare_func(10);
         Sample_2Kt.print_str();
-        
+        sample_text_5.setText(SampleKt.condition_check("chang!!"));
+        SampleKt.condition_check_2("Hello");
+        sample_text_6.setText(""+SampleKt.loop_sample(10,20,30));
 
         setSupportActionBar(toolbar);
 
