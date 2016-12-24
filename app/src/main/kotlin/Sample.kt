@@ -1,7 +1,7 @@
 /**
  * Created by apple on 2016. 12. 23..
  */
-
+@file:JvmName("Sample") // 'Sample' 라는 이름으로 자바에서 접근할 수 있도록 함
 /** 코틀린 기본 문법 - val, var
  * val : 변할 수 없는 상수 Java : final, C/C++등에서는 const
  * var : 일반적인 변수(변경가능)
